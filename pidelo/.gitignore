@@ -1,43 +1,41 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# dependencies
+node_modules/
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Metro
+.metro-health-check*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-__screenshots__/
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 
-# System files
+# macOS
 .DS_Store
-Thumbs.db
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
