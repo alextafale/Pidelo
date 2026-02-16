@@ -4,9 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashScreen from '../screens/SplashScreen';
 import Onboarding from '../onboarding/Onboarding';
 import AccountTypeSelection from '../screens/accountTypeSelection/AccountTypeSelection';
-import Auth from '../screens/auth/Auth';
+import Signup from '../screens/auth/Signup';
 import Login from '../screens/auth/Login';
 import HomeFeed from '../screens/homeFeed/homeFeed';
+import Chatbot from '../screens/chatbot/Chatbot';
+import Profile from '../screens/profile/Profile';
+import EdithProfile from '../screens/profile/EdithProfile';
+import Orders from '../screens/orders/Order';
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -15,6 +19,12 @@ export type RootStackParamList = {
   Auth: { accountType: 'client' | 'business' };
   Login: undefined;
   HomeFeed: undefined;
+  Signup: undefined;
+  Chatbot: undefined;
+  Profile: undefined;
+  EdithProfile: undefined;
+  Orders: undefined;
+
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -36,9 +46,13 @@ export default function StackNavigation() {
           component={AccountTypeSelection}
           options={{ animation: 'fade' }}
         />
-        <Stack.Screen name="Auth" component={Auth} />
+        <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="HomeFeed" component={HomeFeed} />
+        <Stack.Screen name="Chatbot" component={Chatbot} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="EdithProfile" component={EdithProfile} />
+        <Stack.Screen name="Orders" component={Orders} />
       </Stack.Navigator>
     </NavigationContainer>
   );
